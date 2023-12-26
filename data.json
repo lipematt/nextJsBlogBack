@@ -1,0 +1,10 @@
+{
+    "header": "Título do Post 3",
+    "authorId": "clq76d30n0000enj1ucvikgnh",
+    "body": "Conteúdo do Post",
+    "images": [
+      {"name": "coffee.jpg", "width": 800, "height": 600},
+      {"name": "coffee.jpg", "width": 1200, "height": 900}
+    ]
+  }
+  

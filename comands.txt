@@ -1,0 +1,21 @@
+npm init -y
+
+npm i typescript -D
+
+"target": "es2020",    
+
+npm i tsx
+
+"dev": "tsx watch src/server.ts"
+
+npm i prisma -D
+
+npm i @prisma/client
+
+npx prisma init --datasource-provider SQLite
+
+npm i prisma-erd-generator @mermaid-js/mermaid-cli -D
+
+npm i @fastify/cors
+
+npx create-next-app@latest
