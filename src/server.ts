@@ -82,6 +82,29 @@ async function bootstrap() {
     }
   });
 
+  app.get('/api/get/post/:postId', async (request, reply) => {
+    const { postId } = request.params;
+
+    try {
+      const post = await prisma.posts.findUnique({
+        where: {
+          id: postId,
+        },
+        include: {
+          images: true,
+        },
+      });
+
+      if (!post) {
+        return reply.status(404).send({ error: 'Post not found' });
+      }
+
+      return { post };
+    } catch (error) {
+      return reply.status(500).send({ error: 'Internal Server Error' });
+    }
+  });
+
   try {
     await app.listen({
       port: 3333,
